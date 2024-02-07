@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import Header from './component/Header';
+import Main from './component/Main';
+import Product from './component/Product';
 
 function App() {
-  let [글제목, 글제목변경] = useState(['남자코트 추천']);
 
   return (
     <div className="App">
-      <h4> { 글제목 } </h4>
-      <button onClick={ ()=> { 글제목변경(['여자코트 추천'])}}>버튼!!!</button>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Main />}></Route>
+          <Route path='/product/:id' element={<Product />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
