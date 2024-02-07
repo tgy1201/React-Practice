@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <h4> { 글제목 } </h4>
-      <button onClick={ ()=> { 글제목변경(['여자코트 추천'])}}>버튼!</button>
+      <button onClick={ ()=> { 글제목변경(['여자코트 추천'])}}>버튼!!</button>
     </div>
   );
 }
