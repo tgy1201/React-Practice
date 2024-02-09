@@ -1,15 +1,27 @@
 import React, {useState} from "react";
-import { Link } from "react-router-dom";
+import {useEffect} from "react";
+import axios from "axios";
+import Product from "./Product";
+import Banner from "./Banner";
 
-function Main() {
-    const [번호, 번호변경] = useState([1,2,3]);
+function Main({products, setProducts}) {
+    useEffect(()=> {
+        axios.get("/data/products.json").then((a)=>{
+            setProducts(a.data.products)
+        })
+    }, [setProducts]);
+
     return (
         <>
-            {번호.map(bh =>
-                <Link to={`/product/${bh}`}>{bh}<br /></Link>
-            )}
-            
-        </>
+        <Banner />
+        <div className="product">
+            <ul>
+                {products.map((product) => 
+                    <Product key={product.id} product={product}/>
+                )}
+            </ul>
+        </div>
+        </>    
     );
 }
 

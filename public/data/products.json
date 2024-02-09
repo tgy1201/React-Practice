@@ -1,0 +1,40 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "상품 1번",
+            "price": 1900,
+            "image": "/logo192.png"
+        },
+        {
+            "id": 2,
+            "name": "상품 2번",
+            "price": 30900,
+            "image": "/logo192.png"
+        },
+        {
+            "id": 3,
+            "name": "상품 3번",
+            "price": 120010,
+            "image": "/logo192.png"
+        },
+        {
+            "id": 4,
+            "name": "상품 4번",
+            "price": 1900000,
+            "image": "/logo192.png"
+        },
+        {
+            "id": 5,
+            "name": "상품 5번",
+            "price": 1900000,
+            "image": "/logo192.png"
+        },
+        {
+            "id": 6,
+            "name": "상품 6번",
+            "price": 1900000,
+            "image": "/logo192.png"
+        }
+    ]
+}

@@ -1,12 +1,21 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-function Product() {
-    const {id} = useParams()
+function Product({product}) {
+
     return (
-        <>
-            <h3>{id}번 상품</h3>
-        </>
+        <div className="container">
+            <l1>
+                <Link to={`/detail/${product.id}`}>
+                    <div>
+                        <img src={product.image}/>
+                    </div>
+                    <div className="product_name">{product.name}</div>
+                    <div>{product.price}원</div>
+                </Link>
+            </l1>
+        </div>
+        
     );
 }
 
